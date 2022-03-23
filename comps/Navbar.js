@@ -56,7 +56,7 @@ const Navbar = () => {
             </Flex>
             <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
              
-              <Image width={30} height={20} src='/ipicon.png' alt={'InkPressions Logo'} />
+              <Image width={30} height={25} src='/ipicon.png' alt={'InkPressions Logo'} />
     
               <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
                 <DesktopNav />
@@ -246,7 +246,7 @@ const MobileNavItem = ({ label, children, href }) => {
 
 const NAV_ITEMS = [
   {
-    label: 'Inspiration',
+    label: 'Web Stores',
     children: [
       {
         label: 'Explore Design Work',

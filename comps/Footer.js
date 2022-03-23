@@ -15,7 +15,7 @@ const Footer = () => {
       color={useColorModeValue('gray.700', 'gray.200')}>
       <Container
         as={Stack}
-        maxW={'6xl'}
+        maxW={'100%'}
         py={4}
         direction={{ base: 'column', md: 'row' }}
         spacing={4}
