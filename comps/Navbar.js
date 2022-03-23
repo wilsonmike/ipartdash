@@ -21,12 +21,13 @@ import {
     ChevronDownIcon,
     ChevronRightIcon,
   } from '@chakra-ui/icons';
+  import Image from 'next/image';
   
 
 const Navbar = () => {
     const { isOpen, onToggle } = useDisclosure();
     return (
-        <Box>
+        <Box position={'sticky'} top={0}>
           <Flex
             bg={useColorModeValue('white', 'gray.800')}
             color={useColorModeValue('gray.600', 'white')}
@@ -54,12 +55,8 @@ const Navbar = () => {
               />
             </Flex>
             <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-              <Text
-                textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
-                fontFamily={'heading'}
-                color={useColorModeValue('gray.800', 'white')}>
-                Logo
-              </Text>
+             
+              <Image width={30} height={20} src='/ipicon.png' alt={'InkPressions Logo'} />
     
               <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
                 <DesktopNav />
@@ -87,7 +84,7 @@ const Navbar = () => {
                 bg={'#12A99E'}
                 href={'#'}
                 _hover={{
-                  bg: '#2C7A7B',
+                  bg: '#12A99E.50',
                 }}>
                 Sign Up
               </Button>

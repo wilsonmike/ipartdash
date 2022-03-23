@@ -11,7 +11,6 @@ const Footer = () => {
     return ( 
         <Box
       bg={useColorModeValue('gray.50', 'gray.900')} 
-      position={'sticky'}
       bottom={'0'}
       color={useColorModeValue('gray.700', 'gray.200')}>
       <Container
