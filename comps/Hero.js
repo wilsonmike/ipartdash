@@ -27,7 +27,7 @@ const Feature = ({ heading, text }) => {
 
 export default function Hero() {
   return (
-    <Box as={Container} maxW="100%" my={'100px'} p={4} backgroundColor={'lightgray.50'}>
+    <Box as={Container} maxW="100%" my={'5%'} p={4} backgroundColor={'lightgray.50'}>
       <Grid
         templateColumns={{
           base: 'repeat(1, 1fr)',

@@ -39,8 +39,8 @@ const Feature = ({ text, icon, iconBg }) => {
 
 const FeatureBlock = () => {
   return (
-    <Container maxW={'100%'} py={12} verticalAlign={'center'} backgroundColor={'#F6FBFC'}>
-    <SimpleGrid columns={{ base: 1, md: 2 }} spacing={2} >
+    <Container maxW={'100%'} py={12} mx={'0, auto'} verticalAlign={'center'} backgroundColor={'#F6FBFC'}>
+    <SimpleGrid columns={{ base: 1, md: 2 }} spacing={14} >
       <Stack spacing={4} alignSelf={'center'}> 
         <Heading fontSize={'50px'}>InkPressions Quicklinks</Heading>
         <Text color={'gray.500'} fontSize={'lg'}>
