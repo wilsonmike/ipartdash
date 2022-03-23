@@ -14,9 +14,11 @@ import {
   IoAnalyticsSharp,
   IoLogoBitcoin,
   IoSearchSharp,
+  IoStorefront,
+  IoPricetagOutline,
 } from 'react-icons/io5';
 import { ReactElement } from 'react';
-
+import Link from 'next/link';
 const Feature = ({ text, icon, iconBg }) => {
   return (
     <Stack direction={'row'} align={'center'}>
@@ -41,10 +43,10 @@ const FeatureBlock = () => {
       <Stack spacing={4}>
         <Text
           textTransform={'uppercase'}
-          color={'blue.400'}
+          color={'green.400'}
           fontWeight={600}
           fontSize={'sm'}
-          bg={useColorModeValue('blue.50', 'blue.900')}
+          bg={useColorModeValue('green.50', 'green.900')}
           p={2}
           alignSelf={'flex-start'}
           rounded={'md'}>
@@ -62,23 +64,28 @@ const FeatureBlock = () => {
               borderColor={useColorModeValue('gray.100', 'gray.700')}
             />
           }>
-          <Feature
+              <Link href='/artboard/loyaltee' passHref>
+                  <a>
+          <Feature 
             icon={
-              <Icon as={IoAnalyticsSharp} color={'yellow.500'} w={5} h={5} />
+              <Icon as={IoAnalyticsSharp} color={'green.400'} w={5} h={5} />
             }
-            iconBg={useColorModeValue('yellow.100', 'yellow.900')}
-            text={'Business Planning'}
+            iconBg={useColorModeValue('green.50', 'green.900')}
+            text={'Active Stores'}
+          />
+
+                  </a> 
+              </Link>
+          <Feature
+            icon={<Icon as={IoPricetagOutline} color={'green.400'} w={5} h={5} />}
+            iconBg={useColorModeValue('green.50', 'green.900')}
+            text={'Pricing'}
           />
           <Feature
-            icon={<Icon as={IoLogoBitcoin} color={'green.500'} w={5} h={5} />}
-            iconBg={useColorModeValue('green.100', 'green.900')}
-            text={'Financial Planning'}
-          />
-          <Feature
             icon={
-              <Icon as={IoSearchSharp} color={'purple.500'} w={5} h={5} />
+              <Icon as={IoSearchSharp} color={'green.400'} w={5} h={5} />
             }
-            iconBg={useColorModeValue('purple.100', 'purple.900')}
+            iconBg={useColorModeValue('green.50', 'green.900')}
             text={'Market Analysis'}
           />
         </Stack>
