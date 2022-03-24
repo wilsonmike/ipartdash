@@ -27,11 +27,11 @@ import {
 const Navbar = () => {
     const { isOpen, onToggle } = useDisclosure();
     return (
-        <Box position={'sticky'} top={0}>
+        <Box position={'sticky'} top={0} zIndex={5}>
           <Flex
             bg={useColorModeValue('white', 'gray.800')}
             color={useColorModeValue('gray.600', 'white')}
-            minH={'70px'}
+            minH={'75px'}
             maxW={'1440px'}
             mx={"auto"}
             py={{ base: 2 }}
@@ -55,8 +55,9 @@ const Navbar = () => {
               />
             </Flex>
             <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-             
-              <Image width={30} height={25} src='/ipicon.png' alt={'InkPressions Logo'} />
+                <Link href='/' padding={0} >
+                  <Image width={30} height={25} src='/ipicon.png' alt={'InkPressions Logo'} /> 
+                </Link>
     
               <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
                 <DesktopNav />
@@ -261,7 +262,7 @@ const NAV_ITEMS = [
     ],
   },
   {
-    label: 'Find Work',
+    label: 'Priority',
     children: [
       {
         label: 'Job Board',
@@ -276,11 +277,11 @@ const NAV_ITEMS = [
     ],
   },
   {
-    label: 'Learn Design',
+    label: 'Reports',
     href: '#',
   },
   {
-    label: 'Hire Designers',
+    label: 'Loyaltee',
     href: '/artboard/loyaltee',
   },
 ];

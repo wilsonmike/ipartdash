@@ -15,11 +15,14 @@
     "@emotion/styled": "^11.8.1",
     "@mui/icons-material": "^5.5.1",
     "@mui/material": "^5.5.2",
+    "base-64": "^1.0.0",
     "framer-motion": "^6.2.8",
     "next": "12.1.0",
     "react": "17.0.2",
+    "react-bootstrap": "^2.2.1",
     "react-dom": "17.0.2",
-    "react-icons": "^4.3.1"
+    "react-icons": "^4.3.1",
+    "react-to-print": "^2.14.4"
   },
   "devDependencies": {
     "eslint": "8.11.0",
