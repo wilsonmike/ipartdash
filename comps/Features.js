@@ -9,6 +9,7 @@ import {
   StackDivider,
   Icon,
   useColorModeValue,
+  Button,
 } from '@chakra-ui/react';
 import {
   IoAnalyticsSharp,
@@ -20,6 +21,7 @@ import {
 } from 'react-icons/io5';
 import { ReactElement } from 'react';
 import Link from 'next/link';
+import { ArrowForward } from '@mui/icons-material';
 const Feature = ({ text, icon, iconBg }) => {
   return (
     <Stack direction={'row'} align={'center'}>
@@ -44,9 +46,19 @@ const FeatureBlock = () => {
       <Stack spacing={4} alignSelf={'center'}> 
         <Heading fontSize={'50px'}>InkPressions Quicklinks</Heading>
         <Text color={'gray.500'} fontSize={'lg'}>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore
+         High quality custom apparel - use quicklinks to help with production, picking garments, pricing, and reports. 
         </Text> 
+        <Stack spacing={4} direction='row' align='center'>
+          <Button size='md'>
+           HotCards 
+          </Button> 
+          <Button size='md'>
+            Loyaltee 
+          </Button> 
+          <Button size='md'>
+            The Baldridge Group 
+          </Button>  
+        </Stack>
       </Stack>
       <Flex>
         <Image
