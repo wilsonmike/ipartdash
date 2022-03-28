@@ -1,12 +1,15 @@
 import { ChakraProvider } from '@chakra-ui/react'
-import Footer from '../comps/Footer'
 import Layout from '../comps/Layout'
-import Navbar from '../comps/Navbar'
+import Head from 'next/head'
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
   return (
     <ChakraProvider>
+      <Head>
+        <title>InkPressions Quicklinks</title>
+        <link rel="shortcut icon" href="/ipicon.png" />
+      </Head>
       <Layout>
         <Component {...pageProps} />   
       </Layout>

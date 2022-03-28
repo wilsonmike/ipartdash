@@ -25,41 +25,51 @@ const Loyaltee = ({ listorder }) => {
                                 <hr />
                             </div>
                            
-                            <SimpleGrid columns={3} spacing={10}>
+                            <SimpleGrid columns={{sm: 1, md: 3}} spacing={5}>
                                {o.items.map(l => (
                             <Container key={l.orderItemId} boxShadow={'md'} padding={4}>
                              
                                 {l.imageUrl.length > 0 && (
                                     <Image width={400} height={400} src={l.imageUrl} alt={l.name} />
                                 )}
-                                  <Flex direction={'column'}>
-                                    <h2>SKU : {l.sku}</h2>
-                                    <h3>{l.name}</h3> 
-                                </Flex>  
+                                    <Flex direction={'column'}>
+                                        <h2>SKU : {l.sku}</h2>
+                                        <h3>{l.name}</h3> 
+                                    </Flex>  
                                 {l.options.map((i) => (
-                                    <Flex direction={'column'} key={i.name}>
+                                    <Container  key={i.name}>    
                                         {i.name === 'Front Art File' && (
                                             <Link href={i.value} passHref>
                                                <a target="_blank">
-                                                   <Button>
+                                                   <Button marginBottom={3} marginTop={2}>
                                                     Front Art File
                                                    </Button> 
                                                 </a> 
                                             </Link>
-                                        )}
+                                        )} 
                                         {i.name === 'Art File' && (
                                             <Link href={i.value} passHref>
                                                <a target="_blank">
-                                                   <Button>
+                                                   <Button marginBottom={3} marginTop={2}>
                                                     Front Art File
                                                    </Button> 
                                                 </a> 
                                             </Link>
-                                        )}
-                                       <h2>{i.name === 'Back Thumbnail' && (
+                                        )} 
+                                   
+                                         {i.name === 'Back HP Art File' && (
+                                           <Link href={i.value} passHref>
+                                           <a target="_blank">
+                                               <Button>
+                                                Back Art File
+                                               </Button> 
+                                            </a> 
+                                        </Link>
+                                       )}  
+                                       {i.name === 'Back Thumbnail' && (
                                            <Image width={400} height={400} src={i.value} alt='Garment' />
-                                       )}</h2>  
-                                    </Flex>
+                                       )} 
+                                    </Container>
                                     
                                 ))}
                              
