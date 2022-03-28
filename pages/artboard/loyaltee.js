@@ -31,10 +31,19 @@ const Loyaltee = ({ listorder }) => {
                                 {l.imageUrl.length > 0 && (
                                     <Image width={400} height={400} src={l.imageUrl} alt={l.name} />
                                 )}
-                                <Flex direction={'column'}>
+                                  <Flex direction={'column'}>
                                     <h2>SKU : {l.sku}</h2>
                                     <h3>{l.name}</h3> 
-                                </Flex> 
+                                </Flex>  
+                                {l.options.map((i) => (
+                                    <Flex direction={'column'} key={i.name}>
+                                       <h2>{i.name === 'Back Thumbnail' && (
+                                           <Image width={400} height={400} src={i.value} alt='Garment' />
+                                       )}</h2>  
+                                    </Flex>
+                                    
+                                ))}
+                             
                             </Container>
                         ))} 
 
