@@ -1,5 +1,6 @@
-import { Badge, Box, Container, Flex, SimpleGrid } from '@chakra-ui/react';
+import { Badge, Box, Button, Container, Flex, SimpleGrid } from '@chakra-ui/react';
 import Image from 'next/image';
+import Link from 'next/link';
 import PrintComponent from '../../comps/PrintComponent';
 
 let base64 = require('base-64');
@@ -37,6 +38,24 @@ const Loyaltee = ({ listorder }) => {
                                 </Flex>  
                                 {l.options.map((i) => (
                                     <Flex direction={'column'} key={i.name}>
+                                        {i.name === 'Front Art File' && (
+                                            <Link href={i.value} passHref>
+                                               <a target="_blank">
+                                                   <Button>
+                                                    Front Art File
+                                                   </Button> 
+                                                </a> 
+                                            </Link>
+                                        )}
+                                        {i.name === 'Art File' && (
+                                            <Link href={i.value} passHref>
+                                               <a target="_blank">
+                                                   <Button>
+                                                    Front Art File
+                                                   </Button> 
+                                                </a> 
+                                            </Link>
+                                        )}
                                        <h2>{i.name === 'Back Thumbnail' && (
                                            <Image width={400} height={400} src={i.value} alt='Garment' />
                                        )}</h2>  
